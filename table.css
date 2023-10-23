@@ -1,0 +1,105 @@
+/* CSS untuk halaman tabel */
+body {
+    font-family: 'Comic Sans MS', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background-color: #0a18b3;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    position: relative;
+}
+
+header img {
+    position: absolute;
+    top: 30px;
+    left: 10px;
+    max-width: 100px;
+    height: auto;
+}
+
+main {
+    display: flex;
+    flex: 1;
+}
+
+#sidebar {
+    flex: 1;
+    padding: 20px;
+    background-color: rgb(138, 171, 168);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    max-width: 200px; /* Atur lebar maksimum sesuai keinginan Anda */
+}
+
+#sidebar h2 {
+    font-size: 24px;
+}
+
+#sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#sidebar li {
+    margin-bottom: 10px;
+}
+
+#sidebar a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+#sidebar a:hover {
+    color: #ff0000;
+}
+
+#content {
+    flex: 3;
+    padding: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #fff;
+    border: 1px solid #ccc;
+}
+
+table th, table td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: left;
+}
+
+table th {
+    background-color: #1b0ab3;
+    color: #fff;
+}
+
+table tr:nth-child(even) {
+    background-color: #0033ff;
+}
+
+table tr:nth-child(odd) {
+    background-color: #95b7ad;
+}
+footer {
+    background-color: #0a1bb3;
+    color: #fff;
+    text-align: center;
+    padding: 30px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}

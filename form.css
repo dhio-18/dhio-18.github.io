@@ -1,0 +1,134 @@
+/* CSS untuk halaman formulir */
+body {
+    font-family: 'Comic Sans MS', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background-color: #120ab3;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    position: relative;
+}
+
+header img {
+    position: absolute;
+    top: 30px;
+    left: 10px;
+    max-width: 100px;
+    height: auto;
+}
+
+main {
+    display: flex;
+}
+
+#sidebar {
+    flex: 1;
+    padding: 20px;
+    background-color: rgb(142, 172, 169);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    max-width: 200px;
+}
+
+#sidebar h2 {
+    font-size: 24px;
+}
+
+#sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#sidebar li {
+    margin-bottom: 10px;
+}
+
+#sidebar a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+#sidebar a:hover {
+    color: #ff0000;
+}
+
+#content {
+    flex: 3;
+    padding: 20px;
+    text-align: center;
+}
+
+form {
+    max-width: 400px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+form label {
+    font-weight: bold;
+    color: #333;
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="password"],
+form select,
+form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+form input[type="radio"] {
+    margin-right: 10px;
+}
+
+form textarea {
+    height: 100px;
+}
+
+form input[type="submit"] {
+    background-color: #0a34b3;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+footer {
+    background-color: #0d0ab3;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+#confirmation {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 999;
+    background-color: #0a12b3;
+    color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+}

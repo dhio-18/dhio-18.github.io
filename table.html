@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="table.css">
+</head>
+<body>
+    <header>
+        <h1>Data Pendaftar SUPIR CV MEKAR JAYA</h1>
+        <img src="LOGO C.jpg" alt="Logo">
+    </header>
+    <main>
+        <section id="sidebar">
+            <h2>Menu Utama</h2>
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="Form.html">Daftar Menjadi Supir CV MEKAR JAYA!</a></li>
+            </ul>
+        </section>
+        <section id="content">
+            <h2>Berikut adalah data pendaftar SUPIR CV MEKAR JAYA</h2>
+            <table id="studentTable">
+                <tr>
+                    <th>Nama</th>
+                    <th>Nik KTP</th>
+                    <th>Jenis Kelamin</th>
+                    <th>Tanggal Lahir</th>
+                    <th>Alamat</th>
+                </tr>
+                <tr>
+                    <td>Muhammad Fabil</td>
+                    <td>123513612735</td>
+                    <td>Laki-laki</td>
+                    <td>29 April 2003</td>
+                    <td>Bogor</td>
+                </tr>
+                <tr>
+                    <td>Muhammad Faris</td>
+                    <td>121121212</td>
+                    <td>Laki-laki</td>
+                    <td>10 Agustus 2002</td>
+                    <td>Tangerang</td>
+                </tr>
+                <tr>
+                    <td>Evi Listia</td>
+                    <td>121230053</td>
+                    <td>Perempuan</td>
+                    <td>2 Februari 2002</td>
+                    <td>Kotaagung</td>
+                </tr>
+                <tr>
+                    <td>Ade Intan</td>
+                    <td>2121212</td>
+                    <td>Laki-laki</td>
+                    <td>3 Maret 2003</td>
+                    <td>Bandar Lampung</td>
+                </tr>
+                <tr>
+                    <td>Siti Qonita</td>
+                    <td>1212121</td>
+                    <td>Perempuan</td>
+                    <td>4 Agustus 2003</td>
+                    <td>Sukarame</td>
+                </tr>
+            </table>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; CV MEKAR JAYA</p>
+    </footer>
+    
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const studentTable = document.getElementById("studentTable");
+
+        if (localStorage.getItem("studentDataList")) {
+            const studentDataList = JSON.parse(localStorage.getItem("studentDataList"));
+
+            studentDataList.forEach(function(studentData) {
+                const newRow = studentTable.insertRow(-1);
+
+                const cellNama = newRow.insertCell(0);
+                const cellNIM = newRow.insertCell(1);
+                const cellProdi = newRow.insertCell(2);
+                const cellEmail = newRow.insertCell(3);
+                const cellPassword = newRow.insertCell(4);
+                const cellJenisKelamin = newRow.insertCell(5);
+                const cellTanggalLahir = newRow.insertCell(6);
+                const cellAlamat = newRow.insertCell(7);
+
+                cellNama.innerHTML = studentData.nama;
+                cellNIM.innerHTML = studentData.nim;
+                cellProdi.innerHTML = studentData.prodi;
+                cellEmail.innerHTML = studentData.email;
+                cellPassword.innerHTML = studentData.password;
+                cellJenisKelamin.innerHTML = studentData.jenisKelamin;
+                cellTanggalLahir.innerHTML = studentData.tanggalLahir;
+                cellAlamat.innerHTML = studentData.alamat;
+            });
+        }
+    });
+    </script>
+</body>
+</html>
